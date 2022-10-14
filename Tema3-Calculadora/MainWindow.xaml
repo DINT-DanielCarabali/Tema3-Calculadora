@@ -6,70 +6,89 @@
         xmlns:local="clr-namespace:Tema3_Calculadora"
         mc:Ignorable="d"
         Title="Calculadora" Height="550" Width="450" MinHeight="350" MinWidth="250" Icon="assets/apps_accessories_calculator.ico">
-    <Grid ShowGridLines="False">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="7.5"/>
+            <EventSetter Event="Click" Handler="numButton_Click"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="7.5" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        
+        <Border BorderBrush="Black" BorderThickness="1" Margin="7.5" Grid.RowSpan="2" Grid.ColumnSpan="3">
             <Viewbox HorizontalAlignment="Right">
                 <TextBlock x:Name="pantallaTextBlock"/>
             </Viewbox>
         </Border>
-        <Button x:Name="num1Button" Margin="7.5" Grid.Row="2" Grid.Column="0" Click="numButton_Click">
+        
+        <Button x:Name="num1Button" Grid.Row="2" Grid.Column="0">
             <Viewbox>
                 <TextBlock>1</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num2Button" Margin="7.5" Grid.Row="2" Grid.Column="1" Click="numButton_Click">
+        
+        <Button x:Name="num2Button" Grid.Row="2" Grid.Column="1">
             <Viewbox>
                 <TextBlock>2</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num3Button" Margin="7.5" Grid.Row="2" Grid.Column="2" Click="numButton_Click">
+        
+        <Button x:Name="num3Button" Grid.Row="2" Grid.Column="2">
             <Viewbox>
                 <TextBlock>3</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num4Button" Margin="7.5" Grid.Row="3" Grid.Column="0" Click="numButton_Click">
+        
+        <Button x:Name="num4Button" Grid.Row="3" Grid.Column="0">
             <Viewbox>
                 <TextBlock>4</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num5Button" Margin="7.5" Grid.Row="3" Grid.Column="1" Click="numButton_Click">
+        
+        <Button x:Name="num5Button" Grid.Row="3" Grid.Column="1">
             <Viewbox>
                 <TextBlock>5</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num6Button" Margin="7.5" Grid.Row="3" Grid.Column="2" Click="numButton_Click">
+        
+        <Button x:Name="num6Button" Grid.Row="3" Grid.Column="2">
             <Viewbox>
                 <TextBlock>6</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num7Button" Margin="7.5" Grid.Row="4" Grid.Column="0" Click="numButton_Click">
+        
+        <Button x:Name="num7Button" Grid.Row="4" Grid.Column="0">
             <Viewbox>
                 <TextBlock>7</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num8Button" Margin="7.5" Grid.Row="4" Grid.Column="1" Click="numButton_Click">
+        
+        <Button x:Name="num8Button" Grid.Row="4" Grid.Column="1">
             <Viewbox>
                 <TextBlock>8</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num9Button" Margin="7.5" Grid.Row="4" Grid.Column="2" Click="numButton_Click">
+        
+        <Button x:Name="num9Button" Grid.Row="4" Grid.Column="2">
             <Viewbox>
                 <TextBlock>9</TextBlock>
             </Viewbox>
         </Button>
-        <Button x:Name="num0Button" Margin="7.5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" VerticalContentAlignment="Center" FontSize="28" Click="numButton_Click">0</Button>
+        
+        <Button x:Name="num0Button" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" VerticalContentAlignment="Center" FontSize="28">0</Button>
     </Grid>
 </Window>
